@@ -15,10 +15,10 @@ func _ready():
 	_reset_knob()
 	knob.mouse_filter = Control.MOUSE_FILTER_PASS
 	base.mouse_filter = Control.MOUSE_FILTER_PASS
-	$FireButton.mouse_filter = Control.MOUSE_FILTER_STOP
+	$FireButton.mouse_filter = Control.MOUSE_FILTER_PASS
 	knob.connect("gui_input", Callable(self, "_on_knob_gui_input"))
 	base.connect("gui_input", Callable(self, "_on_base_gui_input"))
-	$FireButton.pressed.connect(_on_fire_button_pressed)
+	$FireButton.connect("gui_input", Callable(self, "_on_fire_button_gui_input"))
 
 func _on_knob_gui_input(event):
 	if event is InputEventScreenTouch:
@@ -32,16 +32,6 @@ func _on_knob_gui_input(event):
 			_reset_knob()
 			emit_signal("move_vector", Vector2.ZERO)
 	elif event is InputEventScreenDrag and dragging and event.index == joystick_finger_id:
-		_process_drag(base.get_local_mouse_position())
-	elif event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and not dragging:
-			dragging = true
-			_process_drag(base.get_local_mouse_position())
-		elif event.button_index == MOUSE_BUTTON_LEFT and not event.pressed and dragging:
-			dragging = false
-			_reset_knob()
-			emit_signal("move_vector", Vector2.ZERO)
-	elif event is InputEventMouseMotion and dragging:
 		_process_drag(base.get_local_mouse_position())
 
 func _on_base_gui_input(event):
@@ -57,16 +47,10 @@ func _on_base_gui_input(event):
 			emit_signal("move_vector", Vector2.ZERO)
 	elif event is InputEventScreenDrag and dragging and event.index == joystick_finger_id:
 		_process_drag(base.get_local_mouse_position())
-	elif event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and not dragging:
-			dragging = true
-			_process_drag(base.get_local_mouse_position())
-		elif event.button_index == MOUSE_BUTTON_LEFT and not event.pressed and dragging:
-			dragging = false
-			_reset_knob()
-			emit_signal("move_vector", Vector2.ZERO)
-	elif event is InputEventMouseMotion and dragging:
-		_process_drag(base.get_local_mouse_position())
+
+func _on_fire_button_gui_input(event):
+	if event is InputEventScreenTouch and event.pressed:
+		emit_signal("fire")
 
 func _process_drag(local_pos):
 	var center = base.size / 2
