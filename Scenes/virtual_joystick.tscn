@@ -1,95 +1,58 @@
-[gd_scene load_steps=7 format=3 uid="uid://rs3vy8bid2tl"]
+[gd_scene load_steps=5 format=3 uid="uid://rs3vy8bid2tl"]
 
 [ext_resource type="Script" uid="uid://4drk136j2v6f" path="res://script/virtual_joystick.gd" id="1"]
-[ext_resource type="Texture2D" uid="uid://bj3uqspg2qd8f" path="res://assets/left.svg" id="2"]
-[ext_resource type="Texture2D" uid="uid://d3oy67v45c8vu" path="res://assets/right.svg" id="3"]
-[ext_resource type="Texture2D" uid="uid://bmggv25e0ruem" path="res://assets/up.svg" id="4"]
 [ext_resource type="Texture2D" uid="uid://dhqvalxm3v654" path="res://assets/fire.svg" id="5"]
-[ext_resource type="Texture2D" uid="uid://cfvu1slcydcr4" path="res://assets/down.svg" id="6"]
+[ext_resource type="Texture2D" uid="uid://bwcwbgt6x2oso" path="res://assets/joystick_base.svg" id="7"]
+[ext_resource type="Texture2D" uid="uid://df2itq2xkx36s" path="res://assets/joystick_knob.svg" id="8"]
 
 [node name="VirtualJoystick" type="Control"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
+size_flags_horizontal = 3
 script = ExtResource("1")
 
-[node name="LeftButton" type="TextureButton" parent="."]
-layout_mode = 0
-anchor_left = 0.5
+[node name="JoystickBase" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 2
 anchor_top = 1.0
-anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -180.0
-offset_top = -120.0
-offset_right = -120.0
-offset_bottom = -60.0
-texture_normal = ExtResource("2")
+offset_left = 36.0
+offset_top = 707.0
+offset_right = 196.0
+offset_bottom = 867.0
+grow_vertical = 0
+texture = ExtResource("7")
+expand_mode = 1
 stretch_mode = 5
 
-[node name="RightButton" type="TextureButton" parent="."]
+[node name="JoystickKnob" type="TextureRect" parent="JoystickBase"]
 layout_mode = 1
-anchors_preset = 7
+anchors_preset = 8
 anchor_left = 0.5
-anchor_top = 1.0
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -52.0
-offset_top = -120.0
-offset_right = 12.0
-offset_bottom = -56.0
-grow_horizontal = 2
-grow_vertical = 0
-texture_normal = ExtResource("3")
-stretch_mode = 5
-
-[node name="UpButton" type="TextureButton" parent="."]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -116.0
-offset_top = -180.0
-offset_right = -52.0
-offset_bottom = -116.0
-grow_horizontal = 2
-grow_vertical = 0
-texture_normal = ExtResource("4")
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -40.0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("8")
+expand_mode = 1
 stretch_mode = 5
 
 [node name="FireButton" type="TextureButton" parent="."]
 layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
+anchors_preset = 3
+anchor_left = 1.0
 anchor_top = 1.0
-anchor_right = 0.5
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 141.0
-offset_top = -151.0
-offset_right = 205.0
-offset_bottom = -87.0
-grow_horizontal = 2
+offset_left = 282.0
+offset_top = 728.0
+offset_right = 442.0
+offset_bottom = 888.0
+grow_horizontal = 0
 grow_vertical = 0
-scale = Vector2(1.34035, 1.29487)
+scale = Vector2(0.798495, 0.766122)
 texture_normal = ExtResource("5")
-stretch_mode = 5
-
-[node name="DownButton" type="TextureButton" parent="."]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -116.0
-offset_top = -56.0
-offset_right = -52.0
-offset_bottom = 8.0
-grow_horizontal = 2
-grow_vertical = 0
-texture_normal = ExtResource("6")
 stretch_mode = 5

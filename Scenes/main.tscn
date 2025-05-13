@@ -16,6 +16,7 @@ z_index = -1
 z_index = 1
 
 [node name="EnemySpawner" type="Node2D" parent="."]
+position = Vector2(-28, 32)
 script = ExtResource("4")
 
 [node name="ScoreLabel" type="Label" parent="."]
@@ -28,7 +29,5 @@ text = "Score: 0"
 
 [node name="VirtualJoystick" parent="." instance=ExtResource("5")]
 z_index = 2
-offset_left = 202.0
-offset_top = 907.0
-offset_right = 202.0
-offset_bottom = 907.0
+offset_left = 10.0
+offset_right = 10.0
