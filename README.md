@@ -74,6 +74,11 @@
 │   ├── background.gd   # 背景效果腳本
 │   ├── enemy_spawner.gd # 敵機生成系統
 │   └── start_menu.gd   # 選單控制腳本
+│
+└── assets/            # 資源文件
+    ├── airplane.png   # 飛機圖片
+    ├── airplane2.png  # 飛機圖片2
+    └── enemy.png      # 敵機圖片
 ```
 
 ## 未來改進

@@ -74,6 +74,11 @@ This is a 2D airplane shooting game developed with the Godot engine. Players con
 │   ├── background.gd   # Background effects script
 │   ├── enemy_spawner.gd # Enemy generation system
 │   └── start_menu.gd   # Menu control script
+│
+└── assets/            # Asset files
+    ├── airplane.png   # Airplane image
+    ├── airplane2.png  # Airplane image 2
+    └── enemy.png      # Enemy image
 ```
 
 ## Future Improvements
