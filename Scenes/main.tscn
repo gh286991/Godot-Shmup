@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://doc5th2ahi76i"]
+[gd_scene load_steps=6 format=3 uid="uid://doc5th2ahi76i"]
 
 [ext_resource type="PackedScene" uid="uid://dogc8xrjg4tmo" path="res://Scenes/player.tscn" id="1"]
 [ext_resource type="PackedScene" uid="uid://coheob38v8biy" path="res://Scenes/background.tscn" id="2"]
-[ext_resource type="Script" uid="uid://cmx8aghqteyfg" path="res://script/main.gd" id="3"]
-[ext_resource type="Script" uid="uid://bm3bkrrjoma08" path="res://script/enemy_spawner.gd" id="4"]
+[ext_resource type="Script" uid="uid://cbq5yi8yhjvmy" path="res://script/main.gd" id="3"]
+[ext_resource type="Script" uid="uid://tahyn6l0wgsx" path="res://script/enemy_spawner.gd" id="4"]
+[ext_resource type="PackedScene" uid="uid://rs3vy8bid2tl" path="res://Scenes/virtual_joystick.tscn" id="5"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("3")
@@ -24,3 +25,10 @@ offset_right = 10.0
 offset_bottom = 10.0
 theme_override_font_sizes/font_size = 32
 text = "Score: 0"
+
+[node name="VirtualJoystick" parent="." instance=ExtResource("5")]
+z_index = 2
+offset_left = 202.0
+offset_top = 907.0
+offset_right = 202.0
+offset_bottom = 907.0
