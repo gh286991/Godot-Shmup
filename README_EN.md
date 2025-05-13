@@ -58,20 +58,22 @@ This is a 2D airplane shooting game developed with the Godot engine. Players con
 ## Project Structure
 
 ```
-Scenes/
-├── main.tscn          # Main game scene
-├── main.gd            # Main scene script
-├── player.tscn        # Player scene
-├── player.gd          # Player control script
-├── enemy.tscn         # Enemy scene
-├── enemy.gd           # Enemy behavior script
-├── bullet.tscn        # Bullet scene
-├── bullet.gd          # Bullet behavior script
-├── background.tscn    # Background scene
-├── background.gd      # Background effects script
-├── enemy_spawner.gd   # Enemy generation system
-├── start_menu.tscn    # Start menu scene
-└── start_menu.gd      # Menu control script
+├── Scenes/              # Scene files
+│   ├── main.tscn       # Main game scene
+│   ├── player.tscn     # Player scene
+│   ├── enemy.tscn      # Enemy scene
+│   ├── bullet.tscn     # Bullet scene
+│   ├── background.tscn # Background scene
+│   └── start_menu.tscn # Start menu scene
+│
+├── script/             # Script files
+│   ├── main.gd         # Main scene script
+│   ├── player.gd       # Player control script
+│   ├── enemy.gd        # Enemy behavior script
+│   ├── bullet.gd       # Bullet behavior script
+│   ├── background.gd   # Background effects script
+│   ├── enemy_spawner.gd # Enemy generation system
+│   └── start_menu.gd   # Menu control script
 ```
 
 ## Future Improvements

@@ -58,20 +58,22 @@
 ## 專案結構
 
 ```
-Scenes/
-├── main.tscn          # 主遊戲場景
-├── main.gd            # 主場景腳本
-├── player.tscn        # 玩家場景
-├── player.gd          # 玩家控制腳本
-├── enemy.tscn         # 敵機場景
-├── enemy.gd           # 敵機行為腳本
-├── bullet.tscn        # 子彈場景
-├── bullet.gd          # 子彈行為腳本
-├── background.tscn    # 背景場景
-├── background.gd      # 背景效果腳本
-├── enemy_spawner.gd   # 敵機生成系統
-├── start_menu.tscn    # 開始選單場景
-└── start_menu.gd      # 選單控制腳本
+├── Scenes/              # 場景文件
+│   ├── main.tscn       # 主遊戲場景
+│   ├── player.tscn     # 玩家場景
+│   ├── enemy.tscn      # 敵機場景
+│   ├── bullet.tscn     # 子彈場景
+│   ├── background.tscn # 背景場景
+│   └── start_menu.tscn # 開始選單場景
+│
+├── script/             # 腳本文件
+│   ├── main.gd         # 主場景腳本
+│   ├── player.gd       # 玩家控制腳本
+│   ├── enemy.gd        # 敵機行為腳本
+│   ├── bullet.gd       # 子彈行為腳本
+│   ├── background.gd   # 背景效果腳本
+│   ├── enemy_spawner.gd # 敵機生成系統
+│   └── start_menu.gd   # 選單控制腳本
 ```
 
 ## 未來改進

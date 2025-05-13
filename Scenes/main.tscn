@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://dogc8xrjg4tmo" path="res://Scenes/player.tscn" id="1"]
 [ext_resource type="PackedScene" uid="uid://coheob38v8biy" path="res://Scenes/background.tscn" id="2"]
-[ext_resource type="Script" uid="uid://cmx8aghqteyfg" path="res://Scenes/main.gd" id="3"]
-[ext_resource type="Script" uid="uid://bm3bkrrjoma08" path="res://Scenes/enemy_spawner.gd" id="4"]
+[ext_resource type="Script" uid="uid://cmx8aghqteyfg" path="res://script/main.gd" id="3"]
+[ext_resource type="Script" uid="uid://bm3bkrrjoma08" path="res://script/enemy_spawner.gd" id="4"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("3")

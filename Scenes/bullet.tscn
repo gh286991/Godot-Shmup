@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cu1jp0o7aheim"]
 
 [ext_resource type="Texture2D" uid="uid://d2iu7vrdk3de2" path="res://Scenes/airplane.png" id="1_kxkvc"]
-[ext_resource type="Script" uid="uid://domn4uxxuaptu" path="res://Scenes/bullet.gd" id="1_xxxxx"]
+[ext_resource type="Script" uid="uid://domn4uxxuaptu" path="res://script/bullet.gd" id="1_xxxxx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xxxxx"]
 radius = 4.0
