@@ -4,7 +4,7 @@
 // Incrementing CACHE_VERSION will kick off the install event and force
 // previously cached resources to be updated from the network.
 /** @type {string} */
-const CACHE_VERSION = '1747140258|18074741419';
+const CACHE_VERSION = '1747146635|1196431494';
 /** @type {string} */
 const CACHE_PREFIX = 'airplane-sw-cache-';
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;

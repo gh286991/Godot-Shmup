@@ -6,6 +6,9 @@ var player_velocity: Vector2 = Vector2.ZERO
 
 func _ready():
 	update_score_label()
+	# 判斷是否為觸控裝置，若不是則隱藏虛擬搖桿
+	if not DisplayServer.is_touchscreen_available():
+		$VirtualJoystick.visible = false
 	$VirtualJoystick.move_vector.connect(_on_move_vector)
 	$VirtualJoystick.fire.connect(_on_fire)
 
