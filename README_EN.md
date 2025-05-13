@@ -4,6 +4,11 @@ English | [繁體中文](readme.md)
 
 This is a 2D airplane shooting game developed with the Godot engine. Players control an airplane, dodge enemy aircraft and score points by shooting.
 
+## Online Demo
+
+You can play the game directly in your browser:
+- [Game Demo](https://gh286991.github.io/Godot-Shmup/)
+
 ## Game Features
 
 - Smooth airplane control system
@@ -20,6 +25,9 @@ This is a 2D airplane shooting game developed with the Godot engine. Players con
   - ← Move left
   - → Move right
 - Spacebar: Fire bullets
+- Touch Controls (Mobile Devices):
+  - Virtual Joystick: Control airplane movement
+  - Fire Button: Fire bullets
 
 ## Game Rules
 
@@ -42,6 +50,7 @@ This is a 2D airplane shooting game developed with the Godot engine. Players con
 - `enemy_spawner.gd`: Enemy generation system
 - `bullet.gd`: Bullet behavior logic
 - `background.gd`: Background effects control
+- `virtual_joystick.gd`: Virtual joystick control system
 
 ## Development Environment
 
@@ -73,6 +82,7 @@ This is a 2D airplane shooting game developed with the Godot engine. Players con
 │   ├── bullet.gd       # Bullet behavior script
 │   ├── background.gd   # Background effects script
 │   ├── enemy_spawner.gd # Enemy generation system
+│   ├── virtual_joystick.gd # Virtual joystick control script
 │   └── start_menu.gd   # Menu control script
 │
 └── assets/            # Asset files
