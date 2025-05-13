@@ -30,7 +30,7 @@ jobs:
       - name: Upload Godot HTML5 build
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './build/web' # ⭐️ 重點是這裡：只上傳 Godot 輸出內容
+          path: './build' # ⭐️ 重點是這裡：只上傳 Godot 輸出內容
 
       - name: Deploy to GitHub Pages
         id: deployment
