@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://doc5th2ahi76i"]
+
+[ext_resource type="PackedScene" uid="uid://dogc8xrjg4tmo" path="res://Scenes/player.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://coheob38v8biy" path="res://Scenes/background.tscn" id="2"]
+[ext_resource type="Script" uid="uid://cmx8aghqteyfg" path="res://Scenes/main.gd" id="3"]
+[ext_resource type="Script" uid="uid://bm3bkrrjoma08" path="res://Scenes/enemy_spawner.gd" id="4"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("3")
+
+[node name="Background" parent="." instance=ExtResource("2")]
+z_index = -1
+
+[node name="Player" parent="." instance=ExtResource("1")]
+z_index = 1
+
+[node name="EnemySpawner" type="Node2D" parent="."]
+script = ExtResource("4")
+
+[node name="ScoreLabel" type="Label" parent="."]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 10.0
+offset_bottom = 10.0
+theme_override_font_sizes/font_size = 32
+text = "Score: 0"

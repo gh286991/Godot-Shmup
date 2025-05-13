@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dogc8xrjg4tmo"]
+
+[ext_resource type="Texture2D" uid="uid://buod2fbpgimp1" path="res://Scense/airplane2.png" id="2_1qvld"]
+[ext_resource type="Script" uid="uid://dw8yts3s1pq05" path="res://Scense/player.gd" id="2_xxxxx"]
+
+[node name="Player" type="Area2D" groups=["player"]]
+position = Vector2(161, 520)
+script = ExtResource("2_xxxxx")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.5, 1.375)
+texture = ExtResource("2_1qvld")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]

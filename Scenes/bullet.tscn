@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cu1jp0o7aheim"]
+
+[ext_resource type="Texture2D" uid="uid://d2iu7vrdk3de2" path="res://Scenes/airplane.png" id="1_kxkvc"]
+[ext_resource type="Script" uid="uid://domn4uxxuaptu" path="res://Scenes/bullet.gd" id="1_xxxxx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xxxxx"]
+radius = 4.0
+
+[node name="Bullet" type="Area2D" groups=["bullet"]]
+script = ExtResource("1_xxxxx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_xxxxx")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -4.0
+offset_top = -8.0
+offset_right = 4.0
+offset_bottom = 8.0
+color = Color(1, 1, 0, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_kxkvc")
